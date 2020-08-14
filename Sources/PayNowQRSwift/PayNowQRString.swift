@@ -1,6 +1,6 @@
 
 
-struct PayNowQRString {
+public struct PayNowQRString {
     
     let beneficiaryType : beneficiaryTypeEnum
     let beneficiary : String

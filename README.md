@@ -49,11 +49,11 @@ The code snippets below show how to store the string in a constant / variable an
 
 ```swift
 
-let demo1 = PayNowQR(_beneficiaryType: .UEN, _beneficiary: "S62SS0057G", _beneficiaryName: "Singapore Children's Society", amount: "10.00", reference: "Donation", amountIsEditable: false, _expiryDate: "20201217").finalPayNowQRString
+let demo1 = PayNowQRString(_beneficiaryType: .UEN, _beneficiary: "S62SS0057G", _beneficiaryName: "Singapore Children's Society", amount: "10.00", reference: "Donation", amountIsEditable: false, _expiryDate: "20201217").finalPayNowQRString
 
 print("The result of demo1 is : \(demo1)")
 
-let demo2 = PayNowQR(_beneficiaryType: .Mobile, _beneficiary: "+6512345678", _beneficiaryName: "John Lee", amount: "10.27", reference: "Mr. Lee Bill", amountIsEditable: true, _expiryDate: "nil").finalPayNowQRString
+let demo2 = PayNowQRString(_beneficiaryType: .Mobile, _beneficiary: "+6512345678", _beneficiaryName: "John Lee", amount: "10.27", reference: "Mr. Lee Bill", amountIsEditable: true, _expiryDate: "nil").finalPayNowQRString
 
 print("The result of demo1 is : \(demo2)")
 
