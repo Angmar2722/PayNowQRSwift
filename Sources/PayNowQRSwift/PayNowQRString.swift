@@ -18,7 +18,7 @@ public struct PayNowQRString {
     }
     
     
-    init(_beneficiaryType : beneficiaryTypeEnum, _beneficiary : String, _beneficiaryName : String, amount : String, reference : String, amountIsEditable : Bool, _expiryDate : String?) {
+    public init(_beneficiaryType : beneficiaryTypeEnum, _beneficiary : String, _beneficiaryName : String, amount : String, reference : String, amountIsEditable : Bool, _expiryDate : String?) {
         
         beneficiaryType = _beneficiaryType
         beneficiary = _beneficiary
@@ -332,7 +332,7 @@ public struct PayNowQRString {
         
         
     //Final Pay Now QR Code String With Checksum
-    var finalPayNowQRString : String {
+    public var finalPayNowQRString : String {
         return "\(payNowQRCodeStringWithoutChecksumCRC16)\(checksum_CRC16_String)"
     }
     
