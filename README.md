@@ -44,23 +44,23 @@ After installing the Swift package, remember to type in `import PayNowQRSwift` i
 7. Expiry Date (This is an optional string. If you want to leave it empty, write "nil". If you want to input a date, it has to be exactly in the YYYYMMDD format.)
 
 
-The code snippets below show how to store the string in a constant / variable and shows the value of the string with the specified parameters.
+The code snippets below show how to store the string in a constant / variable and shows the value of the string with the specified parameters when printed.
 
 
 ```swift
 
-let demo1 = PayNowQRString(_beneficiaryType: .UEN, _beneficiary: "S62SS0057G", _beneficiaryName: "Singapore Children's Society", amount: "10.00", reference: "Donation", amountIsEditable: false, _expiryDate: "20201217").finalPayNowQRString
+let demo1 = payNowQRString(_beneficiaryType: .UEN, _beneficiary: "S62SS0057G", _beneficiaryName: "Singapore Children's Society", amount: "10.00", reference: "Donation", amountIsEditable: false, _expiryDate: "20201217")
 
 print("The result of demo1 is : \(demo1)")
 
-let demo2 = PayNowQRString(_beneficiaryType: .Mobile, _beneficiary: "+6512345678", _beneficiaryName: "John Lee", amount: "10.27", reference: "Mr. Lee Bill", amountIsEditable: true, _expiryDate: "nil").finalPayNowQRString
+let demo2 = payNowQRString(_beneficiaryType: .Mobile, _beneficiary: "+6512345678", _beneficiaryName: "John Lee", amount: "10.27", reference: "Mr. Lee Bill", amountIsEditable: true, _expiryDate: "nil")
 
-print("The result of demo1 is : \(demo2)")
+print("The result of demo2 is : \(demo2)")
 
 ```
 
 
-`The result of demo1 is : 00020101021226490009SG.PAYNOW010120210201023709H03010040820201127520400005303702540550.005802SG5930Singapore Engineering Services6009Singapore62220118SES Monday Payment6304763F`
+`The result of demo1 is : 00020101021226490009SG.PAYNOW010120210S62SS0057G03010040820201217520400005303702540510.005802SG5928Singapore Children's Society6009Singapore62120108Donation63047D02`
 `The result of demo2 is : 00020101021226380009SG.PAYNOW010100211+651234567803011520400005303702540510.275802SG5908John Lee6009Singapore62160112Mr. Lee Bill6304BD9B`
 
 
