@@ -59,12 +59,9 @@ print("The result of demo1 is : \(demo2)")
 
 ```
 
-```swift
 
-The result of demo1 is : 00020101021226490009SG.PAYNOW010120210201023709H03010040820201127520400005303702540550.005802SG5930Singapore Engineering Services6009Singapore62220118SES Monday Payment6304763F
-The result of demo2 is : 00020101021226380009SG.PAYNOW010100211+651234567803011520400005303702540510.275802SG5908John Lee6009Singapore62160112Mr. Lee Bill6304BD9B
-
-```
+`The result of demo1 is : 00020101021226490009SG.PAYNOW010120210201023709H03010040820201127520400005303702540550.005802SG5930Singapore Engineering Services6009Singapore62220118SES Monday Payment6304763F`
+`The result of demo2 is : 00020101021226380009SG.PAYNOW010100211+651234567803011520400005303702540510.275802SG5908John Lee6009Singapore62160112Mr. Lee Bill6304BD9B`
 
 
 
@@ -105,7 +102,7 @@ let qrCodeImage = generateQRCode(from: demo1, with: demoImageView)
 
 The Pay Now QR Code Image generated with the demo1 constant is shown below :
 
-![Demo 1 QR Code](https://raw.githubusercontent.com/Angmar2722/PayNowQRSwift/master/Images/demo1QR.jpg)
+![Demo 1 QR Code](https://raw.githubusercontent.com/Angmar2722/PayNowQRSwift/master/Images/demo1QR.jpeg)
 
 
 
