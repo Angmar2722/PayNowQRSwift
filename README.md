@@ -9,6 +9,16 @@ Hello! I am a high scool student who just learned to code. This is my first atte
 ![PayNowSwiftQR: A library to help generate Pay Now QR Codes](https://raw.githubusercontent.com/Angmar2722/PayNowQRSwift/master/Images/PayNowLogo.jpg)
 
 
+**What Is Pay Now ?**
+
+[PayNow](https://abs.org.sg/consumer-banking/pay-now) is a peer-to-peer funds transfer service available to the customers of nine participating banks in Singapore. The payer can instantly & securely transfer funds to the beneficiary by scanning the PayNow QR Code with their internet banking app.
+
+It is based on the international MasterCard [EMV](https://www.emvco.com/emv-technologies/qrcodes/#:~:text=EMVCo%20has%20focused%20on%20creating,actors%20across%20the%20payments%20ecosystem.) standard.
+
+
+<br/>
+
+
 **Introduction :**
 
 This library enables you to generate the following by specifying their parameters :
@@ -50,12 +60,12 @@ The table below shows you how to fill in the values for the Pay Now QR String.
 | No. | String Parameter   | Data Type | What Is It ?                                                                                         | Format                                                                                                                                            |
 |-----|--------------------|-----------|------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
 | 1   | Beneficiary Type   | Enum      | Specifies Whether It Is A Mobile Number Or UEN                                                       | You can write either .UEN or .Mobile                                                                                                              |
-| 2   | Beneficiary        | String    | The actual UEN or Mobile Number Value                                                                | If the beneficiary is a mobile number, make sure it is in this format : "+65MobileNumber". If the beneficiary is a UEN, write the UEN as a String |
-| 3   | Beneficiary Name   | String    | The Name Of The Organisation And Its Corresponding UEN Or The Name Of The Owner Of The Mobile Number | (A string identifying the beneficiary, could be a person or organisation                                                                          |
+| 2   | Beneficiary        | String    | The actual UEN or Mobile Number Value                                                                | If the beneficiary is a mobile number, make sure it is in this format : "+65MobileNumber". If the beneficiary is a UEN, write the UEN as a String. |
+| 3   | Beneficiary Name   | String    | The Name Of The Organisation And Its Corresponding UEN Or The Name Of The Owner Of The Mobile Number | (A string identifying the beneficiary, could be a person or organisation .                                                                         |
 | 4   | Transaction Amount | CG Float  | The Amount To Be Paid                                                                                | The number you type in has to have less than 13 characters and has to be positive.                                                                |
-| 5   | Reference          | String    | The Unique Identifier Assigned To Any Financial Transaction                                          | Any string                                                                                                                                        |
-| 6   | Amount Is Editable | Bool      | The Option To Let The Transaction Amount Be Edited Later On                                          | If set to true, it allows the user to edit the transaction amount using their banking app etc. If it is false, the user cannot edit the amount    |
-| 7   | Expiry Date        | Date      | The Expiry Date Of The QR Code                                                                       | This is an optional string. If you want to leave it empty, write nil. Otherwise, any date can be inputted.                                        |
+| 5   | Reference          | String    | The Unique Identifier Assigned To Any Financial Transaction.                                          | Any string                                                                                                                                        |
+| 6   | Amount Is Editable | Bool      | The Option To Let The Transaction Amount Be Edited Later On                                          | If set to true, it allows the user to edit the transaction amount using their banking app etc. If it is false, the user cannot edit the amount.    |
+| 7   | Expiry Date        | Date      | The Expiry Date Of The QR Code                                                                       | This is an optional string. If you want to leave it empty, pass nil. Otherwise, any date can be inputted.                                        |
 
 
 The code snippets below show how to store the string in a constant / variable and shows the value of the string with the specified parameters when printed.
@@ -145,7 +155,7 @@ Aside from returning the string for a Pay Now QR Code, this framework also allow
 
 Apart from providing you with an image, the framework also allows you to write some text below the QR Code to convey some information without scanning (this is optional).
 
-To create the image, call the function `payNowQRImage` and pass in your values for the 9 parameters (The first 7 parameters are the same as for creating the string). The function returns a UIImage.
+To create the image, call the function `payNowQRImage` and pass in your values for the 9 parameters (The first 7 parameters are the same as for creating the string). The function returns a **UIImage**.
 
 
 The table below shows you how to fill in the values for the Pay Now QR Image generation function.
@@ -161,7 +171,7 @@ The table below shows you how to fill in the values for the Pay Now QR Image gen
 |-----|------------------------|---------------------------------------|---------------------------------------------------------------------------------|------------------------------------------------------------------------------------|
 | 1-7 | String Parameters      | Refer To The String Parameters Table  | Refer To The String Parameters Table                                            | Refer To The String Parameters Table                                               |
 | 8   | QR Code Width & Height | CG Float                              | The width or height of the QR Code (Since it is a square, both sides are equal) | Any positive number                                                                |
-| 9   | Bottom Label Text      | String                                | A label below the QR Code displaying relevant information.                      | Any text (Be it a number or a string). If you want to remove the label, write nil. |
+| 9   | Bottom Label Text      | String                                | A label below the QR Code displaying relevant information.                      | Any text (Be it a number or a string). If you want to remove the label, pass nil. |
 
 
 <br/>
@@ -213,4 +223,4 @@ After adding the images to an image view and then running it on a simulator, her
 
 
 **Note  :**
-The Pay Now QR Image generation function returns a clear image when the width / height of the QR code is equal to the width and height of the UIImageView it is added to.
+The Pay Now QR Image generation function returns a clear image when the width / height of the QR code is **equal** to the width and height of the UIImageView it is added to.
