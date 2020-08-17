@@ -11,7 +11,7 @@ Hello! I am a high scool student who just learned to code. This is my first atte
 
 **Introduction :**
 
-This library enables you to obtain the following by specifying their parameters :
+This library enables you to generate the following by specifying their parameters :
 
 1. The string value of a Pay Now QR Code 
 2. The Pay Now QR Code image  
@@ -32,7 +32,7 @@ After installing the Swift package, remember to type in `import PayNowQRSwift` i
 <br/>
 
 
-**Creating The String  For A Pay Now QR Code:**
+**Pay Now QR Code String Generation :**
 
 
 Call the function `payNowQRString` and pass in your values for the 7 parameters. The function returns a string which can then be stored in a constant / variable 
@@ -44,7 +44,7 @@ The table below shows you how to fill in the values for the Pay Now QR String.
 <br/>
 
 
-**The String Parameter Table**
+**The String Parameter Table :**
 
 
 | No. | String Parameter   | Data Type | What Is It ?                                                                                         | Format                                                                                                                                            |
@@ -139,7 +139,7 @@ The Pay Now QR Code Image generated with the demo1 constant is shown below :
 <br/>
 
 
-**The Pay Now QR Code Image :**
+**Pay Now QR Code Image  Generation :**
 
 Aside from returning the string for a Pay Now QR Code, this framework also allows you to quickly create the standard Pay Now QR Code image (with its distinctive purple colour as well as having the Pay Now Logo). 
 
@@ -154,7 +154,7 @@ The table below shows you how to fill in the values for the Pay Now QR Image gen
 <br/>
 
 
-**The Image Parameter Table**
+**The Image Parameter Table :**
 
 
 | No. | Image Parameter        | Data Type                             | What Is It ?                                                                    | Format                                                                             |
@@ -167,7 +167,7 @@ The table below shows you how to fill in the values for the Pay Now QR Image gen
 <br/>
 
 
-**Usage :**
+**Usage  :**
 
 
 The code snippets below show how you can pass in different values for the image parameters to create different images.
@@ -196,7 +196,7 @@ After adding the images to an image view and then running it on a simulator, her
 <br/>
 
 
-**qrImage1 :**
+**qrImage1  :**
 
 ![qrImage1](https://raw.githubusercontent.com/Angmar2722/PayNowQRSwift/master/Images/qrImage1.png)
 
@@ -204,10 +204,13 @@ After adding the images to an image view and then running it on a simulator, her
 <br/>
 
 
-**qrImage2 :**
+**qrImage2  :**
 
 ![qrImage2](https://raw.githubusercontent.com/Angmar2722/PayNowQRSwift/master/Images/qrImage2.png)
 
 
-**Note :**
+<br/>
+
+
+**Note  :**
 The Pay Now QR Image generation function returns a clear image when the width / height of the QR code is equal to the width and height of the UIImageView it is added to.

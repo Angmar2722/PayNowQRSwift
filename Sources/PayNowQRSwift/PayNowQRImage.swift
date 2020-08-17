@@ -47,8 +47,9 @@ public func payNowQRImage(_beneficiaryType : beneficiaryTypeEnum, _beneficiary :
     //3 Images To Merge
     let qrImage = payNowQRImageStructObject.generateQRCode(from: finalQRString, with: qrWidthAndHeight)!
     let extraInfoLabelImage_ = payNowQRImageStructObject.getExtraInfoLabelImage(labelText: bottomLabelText, qrCodeWidthAndHeight: qrWidthAndHeight)
-    let payNowLogoImage_ = UIImage(named: "PayNowLogo.jpg")!
+    let payNowLogoImage_ = #imageLiteral(resourceName: "Pay Now Logo")
     
+    //Final Merged Image
     let finalQRImage = payNowQRImageStructObject.getFinalMergedImage(qrCodeWidthAndHeight: qrWidthAndHeight, qrCodeImage: qrImage, payNowLogoImage: payNowLogoImage_, extraInfoLabelImage: extraInfoLabelImage_)
         
     return finalQRImage
