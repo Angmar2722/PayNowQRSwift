@@ -1,6 +1,15 @@
 
+import UIKit
 
-public struct PayNowQRStringStruct {
+
+//Initializing Enumerations
+public enum beneficiaryTypeEnum {
+    case Mobile
+    case UEN
+}
+
+
+struct PayNowQRStringStruct {
     
     let beneficiaryType : beneficiaryTypeEnum
     let beneficiary : String
@@ -9,13 +18,6 @@ public struct PayNowQRStringStruct {
     let referenceNumber : String
     let isEditable : Bool
     let expiryDate : String?
-    
-    
-    //Initializing Enumerations
-    public enum beneficiaryTypeEnum {
-        case Mobile
-        case UEN
-    }
     
     
     init(beneficiaryType_ : beneficiaryTypeEnum, beneficiary_ : String, beneficiaryName_ : String, amount_ : String, reference_ : String, amountIsEditable_ : Bool, expiryDate_ : String?) {
@@ -127,7 +129,7 @@ public struct PayNowQRStringStruct {
     //Merchant Account Info Template Sub-Category : Expiry Date (YYYYMMDD Format) (This Is An Optional Category)
     var expiryDateString : String {
         
-        if expiryDate == "nil" {
+        if expiryDate == nil {
             return ""
         } else {
             let expiryDateStringID = "04"
